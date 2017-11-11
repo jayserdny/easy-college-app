@@ -2,5 +2,7 @@
   "name": "booktrade",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
