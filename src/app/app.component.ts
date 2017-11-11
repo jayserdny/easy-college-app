@@ -12,7 +12,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = "SelfProfilePage";/**Change this back to HomePage */
+  rootPage: any = HomePage;/**Change this back to HomePage */
 
   pages: Array<{title: string, component: any}>;
 
