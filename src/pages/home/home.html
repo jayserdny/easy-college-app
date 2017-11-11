@@ -18,12 +18,26 @@
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-content>
+    <div class="img-cover" style="background: url(assets/img/book-bg.jpg) no-repeat, center center">
+      <div class="center plr20 pb30">
+        <h3 class="text-dark m0 pt30">What book are you looking for today?</h3>
+        <p class="text-dark font-14 plr30">Fill this form to get the results you want! 👌🏼</p>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-sm-6 offset-sm-3>
+                <div class="ptb10">
+                    <div class="box-form-fill pb30">
+                      <ion-input
+                      placeholder="Type the title or ISBN of the book"
+                      class="form-fill round-small bg-white font-16 text-dark ptb10 mb20 plr20"
+                      type="text"></ion-input>
+                    </div>
+                </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </div>
+    </div>
 </ion-content>
