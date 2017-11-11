@@ -17,7 +17,8 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.title.title-md, .title.title-wp {
+// Center titles in Android
+.title.title-md {
     position: absolute;
     left: 50%;
     top: 0;
@@ -25,23 +26,122 @@
     height: 100%;
     width: 70%;
     text-align: center;
-  }
+}
 
+// Aligments
+
+.center {
+    text-align: center !important;
+}
+
+.plr20 {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.plr30 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.ptb10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.ptb10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.m0 {
+    margin: 0px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+// Custom styles
+
+.round-small {
+    border-radius: 6px 6px 6px 6px !important;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+    color: #20242d !important;
+}
+
+.form-fill {
+    background-color: #eceef6;
+}
+
+// Text styles
+.text-dark {
+    color: #20242d !important;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+
+
+// Change font globally
+
+*, h3 {
+    font-family: "Nunito Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.75px;
+    font-weight: 300;
+}
+
+// Border for the android header
+
+.header-md::after, 
+.tabs-md[tabsPlacement="top"] > 
+.tabbar::after, 
+.footer-md::before, 
+.tabs-md[tabsPlacement="bottom"] > 
+.tabbar::before {
+    left: 0;
+    bottom: -5px;
+    background-position: left 0 top -2px;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-image: none !important;
+    background-color: orange !important;
+    background-repeat: repeat-x;
+    content: "";
+}
+
+// Hide scrollbars
+
+div::-webkit-scrollbar {
+    border:none;
+    width:0;
+    background: rgba(0,0,0,0);
+} 
   
-  div::-webkit-scrollbar {
+div::-webkit-scrollbar-track {
     border:none;
     width:0;
     background: rgba(0,0,0,0);
-  }
+}
    
-  div::-webkit-scrollbar-track {
+div::-webkit-scrollbar-thumb {
     border:none;
     width:0;
     background: rgba(0,0,0,0);
-  }
-   
-  div::-webkit-scrollbar-thumb {
-    border:none;
-    width:0;
-    background: rgba(0,0,0,0);
-  }
+}
