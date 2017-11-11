@@ -5,7 +5,7 @@
       </button>
         
       <ion-title>
-          App Name
+          Google 2.0
       </ion-title>
         
       <ion-buttons end>
@@ -22,7 +22,7 @@
     <div class="img-cover" style="background: url(assets/img/book-bg.jpg) no-repeat, center center">
       <div class="center plr20">
         <h3 class="text-dark m0 pt30">What book are you looking for today?</h3>
-        <p class="text-dark font-14 plr30">Fill this form to get the results you want! 👌🏼</p>
+        <p class="text-dark font-14 plr30">Fill this out to get the results you want! 👌🏼</p>
         <ion-grid>
           <ion-row>
             <ion-col col-sm-6 offset-sm-3>
@@ -120,8 +120,12 @@
             </ion-row>
         </ion-grid>
     </div>
-
     <ion-fab right bottom>
         <button ion-fab color="orange"><ion-icon name="book"></ion-icon></button>
-      </ion-fab>
+        <ion-fab-list side="top">
+          <button (tap)="takePhoto()" ion-fab><ion-icon name="albums"></ion-icon></button>
+          <button ion-fab><ion-icon name="camera"></ion-icon></button>
+          
+        </ion-fab-list>
+    </ion-fab>
 </ion-content>
