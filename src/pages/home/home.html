@@ -5,7 +5,7 @@
       </button>
         
       <ion-title>
-          App Name
+          Google 2.0
       </ion-title>
         
       <ion-buttons end>
@@ -120,8 +120,12 @@
             </ion-row>
         </ion-grid>
     </div>
-
     <ion-fab right bottom>
         <button ion-fab color="orange"><ion-icon name="book"></ion-icon></button>
-      </ion-fab>
+        <ion-fab-list side="top">
+          <button (tap)="takePhoto()" ion-fab><ion-icon name="albums"></ion-icon></button>
+          <button ion-fab><ion-icon name="camera"></ion-icon></button>
+          
+        </ion-fab-list>
+    </ion-fab>
 </ion-content>
