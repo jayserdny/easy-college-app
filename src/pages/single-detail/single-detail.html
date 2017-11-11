@@ -5,9 +5,19 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+<!--I dont know how to put that back button right noww its menu-->
+   <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="back"></ion-icon>
+      </button>
+    <ion-title>App Name</ion-title>
+<ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="ios-search-outline"></ion-icon>
+        </button>
+        
+      </ion-buttons>
 
-  <ion-navbar>
-    <ion-title>single-detail</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,6 +25,61 @@
 
 <ion-content padding>
 
-	I added this content right now
 
+<!-- what im trying to do here is put the trader info like a profile pic, college and etc. -->
+<ion-list>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="assets/Hack.jpg">
+    </ion-avatar>
+    <h2>Richard</h2>
+    <p>Bronx Community College</p>
+  </ion-item>
+</ion-list>
+
+<div text-center><h5>Mathmatics Sixth Edition</h5></div>
+
+<div text-center>
+	<img width="50%" height="50%"  src="https://oup.com.pk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/7/9780195979558_1.jpg">
+</div>
+
+<h5>Book info</h5>
+
+<p>This is the book that everyone needs for there basic mathematics! This is currently the sixth edidtion and its in pretty good shape if you would like photos you can message. I am willing to trade this book in for 7th or 8th edition Astronomy book
+</p>
+
+<h3>Do you have need any of these books?</h3>
+
+
+<!--Need Pictures of the book and in the text the type of book it is. Also I dont know how to put i thte way-->
+<ion-grid>
+  <ion-row>
+    <ion-col>
+     <h6 class="text-white">Student Name</h6>
+                          <p class="text-white font-9">Name of the College</p>
+    </ion-col>
+    <ion-col>
+      <h6 class="text-white">Student Name</h6>
+                          <p class="text-white font-9">Name of the College</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+     <h6 class="text-white">Student Name</h6>
+                          <p class="text-white font-9">Name of the College</p>
+    </ion-col>
+    <ion-col>
+     <h6 class="text-white">Student Name</h6>
+                          <p class="text-white font-9">Name of the College</p>
+    </ion-col>
+    <ion-col>
+      <h6 class="text-white">Student Name</h6>
+                          <p class="text-white font-9">Name of the College</p>
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
 </ion-content>
+<ion-footer>
+	<button ion-button>test</button>
+</ion-footer>
