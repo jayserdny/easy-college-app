@@ -98,11 +98,15 @@
     font-size: 14px !important;
 }
 
+.font-9 {
+    font-size: 9px !important;
+}
+
 
 
 // Change font globally
 
-*, h3, h4 {
+*, h3, h4, h6 {
     font-family: "Nunito Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
