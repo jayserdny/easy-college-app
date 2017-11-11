@@ -1,0 +1,20 @@
+page-post-boook {
+
+    img {
+        object-fit: cover !important
+    }
+
+    .alignCenter {
+        height: 100%;
+        display: block;
+        vertical-align: middle;
+    }
+
+    .customSearchBtn {
+        width: 58% !important;
+        height: 4.6rem !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+}

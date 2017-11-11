@@ -15,6 +15,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environment/environment';
 import { BookUtilProvider } from '../providers/book-util/book-util';
 import { CameraProvider } from '../providers/camera/camera';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CameraProvider } from '../providers/camera/camera';
   ],
   providers: [
     StatusBar,
+    Camera,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BookUtilProvider,

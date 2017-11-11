@@ -40,7 +40,7 @@ export class CameraProvider {
       allowEdit : true,
       encodingType: this.camera.EncodingType.JPEG,
       targetWidth: 1024,
-      targetHeight: 768,
+      targetHeight: 1024,
       saveToPhotoAlbum: false,
       correctOrientation: true
     };
