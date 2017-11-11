@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environment/environment';
+import { BookUtilProvider } from '../providers/book-util/book-util';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { environment } from '../environment/environment';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BookUtilProvider
   ]
 })
 export class AppModule {}
