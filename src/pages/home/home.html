@@ -20,18 +20,38 @@
 
 <ion-content>
     <div class="img-cover" style="background: url(assets/img/book-bg.jpg) no-repeat, center center">
-      <div class="center plr20 pb30">
+      <div class="center plr20">
         <h3 class="text-dark m0 pt30">What book are you looking for today?</h3>
         <p class="text-dark font-14 plr30">Fill this form to get the results you want! 👌🏼</p>
         <ion-grid>
           <ion-row>
             <ion-col col-sm-6 offset-sm-3>
                 <div class="ptb10">
-                    <div class="box-form-fill pb30">
+                    <div class="box-form-fill">
                       <ion-input
                       placeholder="Type the title or ISBN of the book"
                       class="form-fill round-small bg-white font-16 text-dark ptb10 mb20 plr20"
                       type="text"></ion-input>
+
+                      <ion-list class="mb10">
+
+                        <ion-item class="form-fill round-small bg-white font-16 
+                                         text-dark no-border pl25 mt30 ">
+
+                            <ion-label class="text-dark" id="lbl-1">Select your college</ion-label>
+                            <ion-select class="pr20"></ion-select>
+                              
+
+                        </ion-item>
+
+                      </ion-list>
+
+                      <button ion-button 
+                              text-center 
+                              round 
+                              color="orange"
+                              class="customSearchBtn">Search Now</button>
+
                     </div>
                 </div>
             </ion-col>
@@ -40,4 +60,68 @@
         
       </div>
     </div>
+
+    <!-- Area for Mathematics category -->
+    <div class="plr20">
+      <h4>Latest Math Books</h4>
+      <p>Some of the latest posted books under the category Mathematics.</p>
+    </div>
+
+    <!-- Here should be a loop for books under math category -->
+    <div class="items">
+        <ion-grid>
+            <ion-row>
+              <ion-col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 >
+                <ion-card>     
+                  <img class="bookCovers" src="http://ebook-dl.com/pictures/books/discrete_mathematics_and_its_applications_kenneth_rosen(www.ebook-dl.com)_Large.jpg" />
+                  <ion-card-content>
+                    <ion-item no-padding>
+                      <ion-avatar item-start>
+                          <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                      </ion-avatar>
+                      <ion-label>
+                          <h6 class="text-white">Student Name</h6>
+                          <p class="text-white font-9">Name of the College</p>
+                      </ion-label>
+                    </ion-item>
+                  </ion-card-content>
+                </ion-card>
+
+                <ion-card>     
+                    <img class="bookCovers" src="https://images-na.ssl-images-amazon.com/images/I/51Lq65oVveL._SX385_BO1,204,203,200_.jpg" />
+                    <ion-card-content>
+                        <ion-item no-padding>
+                          <ion-avatar item-start>
+                              <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                          </ion-avatar>
+                          <ion-label>
+                              <h6 class="text-white">Student Name</h6>
+                              <p class="text-white font-9">Name of the College</p>
+                          </ion-label>
+                        </ion-item>
+                      </ion-card-content>
+                  </ion-card>
+
+                  <ion-card>     
+                      <img class="bookCovers" src="http://pssthemes.com/templates/revo/www/assets/img/card-img.jpg" />
+                      <ion-card-content>
+                          <ion-item no-padding>
+                            <ion-avatar item-start>
+                                <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                            </ion-avatar>
+                            <ion-label>
+                                <h6 class="text-white">Student Name</h6>
+                                <p class="text-white font-9">Name of the College</p>
+                            </ion-label>
+                          </ion-item>
+                        </ion-card-content>
+                    </ion-card>
+              </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+    <ion-fab right bottom>
+        <button ion-fab color="orange"><ion-icon name="book"></ion-icon></button>
+      </ion-fab>
 </ion-content>
