@@ -22,11 +22,10 @@ export class PostBoookPage {
     this.coverPhoto += navParams.get("photo")
     
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PostBoookPage');
-  }
-
+ 
+  /**
+   * Method to submit the book to the database
+   */
   postBook() {
     this.book.cover = this.coverPhoto
     const loading = this.loadingCtrl.create();
@@ -41,8 +40,8 @@ export class PostBoookPage {
         loading.dismiss()
         toast.present()
         this.navCtrl.pop()
-        
-
+      }).catch(error => {
+        console.log(error)
       })
     })
 

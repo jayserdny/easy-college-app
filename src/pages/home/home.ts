@@ -13,8 +13,22 @@ export class HomePage {
 
   }
 
+  /**
+   * Method to open the camera to take a photo
+   */
   takePhoto() {
     this.cameraUtil.getPictureFromCamera().then(data => {
+      this.navCtrl.push("PostBoookPage", {
+        photo: data
+      })
+    })
+  }
+
+  /**
+   * Method to select the image from the library
+   */
+  selectFromLibrary() {
+    this.cameraUtil.getPictureFromPhotoLibrary().then(data => {
       this.navCtrl.push("PostBoookPage", {
         photo: data
       })
