@@ -8,6 +8,10 @@ page-messages {
   overflow: visible !important;
 }
 
+.timestamp {
+  font-size: 1rem;
+}
+
 .bar-footer textarea {
   resize: none;
   height: 25px;
@@ -182,9 +186,4 @@ a.autolinker {
 .loader .ion-loading-c {
   font-size: 64px;
 }
-}page-chat-single {
-
-}
-span{
-  font-size: 10px;
 }

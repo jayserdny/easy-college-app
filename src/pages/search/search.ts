@@ -32,7 +32,11 @@ export class SearchPage {
 
   doSearch() {
     let type = typeof this.searchText;
-    if (this.searchText.match("[0-9]+") ) {
+
+    if (this.searchText == "" || this.searchText == null) {
+      this.results = this.db.collection('books').valueChanges()
+    }
+    else if (this.searchText.match("[0-9]+") ) {
 
       this.results = this.db.collection('books', book => book.where('isbn', '==', this.searchText)).valueChanges()
 

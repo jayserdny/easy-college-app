@@ -14,8 +14,8 @@
 				</div>
 
 				<div class="message-detail">
-					<span (click)="viewProfile(message)" class="bold"></span>,
-					<span>{{message.date | amTimeAgo}}</span>
+					<span (click)="viewProfile(message)" class="bold"></span>
+					<span class="timestamp">{{message.date | amTimeAgo}}</span>
 				</div>
 
 			</div>
@@ -31,8 +31,8 @@
 				</div>
 
 				<div class="message-detail">
-					<span (click)="viewProfile(message)" class="bold"></span>,
-					<span>{{message.date | amTimeAgo}}</span>
+					<span (click)="viewProfile(message)" class="bold"></span>
+					<span class="timestamp">{{message.date | amTimeAgo}}</span>
 				</div>
 
 			</div>
@@ -47,7 +47,7 @@
 	<form [formGroup]="messageForm" (submit)="send(chatBox)" novalidate>
 		<ion-item>
 			<ion-input formControlName="message" [(ngModel)]="chatBox" placeholder="Send a message..."></ion-input>
-			<button ion-button clear (click)="send(chatBox)" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>
+			<button ion-button clear (click)="send(chatBox)" color="orange" item-end><ion-icon class="footer-btn" name="send"></ion-icon></button>
 		</ion-item>
 	</form>
 </ion-footer>

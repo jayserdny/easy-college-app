@@ -1,3 +1,78 @@
 page-single-detail {
 
+    .imagePlaceholder {
+        position: relative;
+    }
+
+    .imageAjusted {
+        //z-index: -1;
+        width: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
+
+    ion-list {
+        margin: 0 !important
+    }
+
+    .customItems {
+        background-color: #f7f7f7 !important;
+        
+    }
+
+    .item-md.item-block .item-inner, .item-ios.item-block .item-inner {
+        
+        border-bottom: none !important;
+    }
+
+    .items {
+        overflow-x: auto;
+        white-space: nowrap;
+        
+    
+        .card {
+          overflow: hidden;
+          width: 25rem;
+          border-radius: 7px !important;
+          margin-right: 9px !important;
+          display: inline-block;
+          
+          margin-right: 1.6rem;
+    
+          .card-header {
+            width: 100%;
+            height: 17rem;
+            
+            background-size: 100% auto;
+          }
+    
+          span[gray] {
+            font-size: 1.2rem;
+          }
+    
+          .pull-left {
+            max-width: 18rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+          }
+        }
+    }
+
+    .bookCovers {
+        width: 250px !important;
+        height: 166.55px !important;
+        object-fit: cover;
+    }
+
+    .footerNew {
+        position: fixed;
+        bottom: 1%;
+        width: 100% !important;
+    }
+
+
+
 }

@@ -39,8 +39,10 @@
                         <ion-item class="form-fill round-small bg-white font-16 
                                          text-dark no-border pl25 mt30 ">
 
-                            <ion-label class="text-dark" id="lbl-1">Select your college</ion-label>
-                            <ion-select class="pr20"></ion-select>
+                            <ion-label class="text-dark" id="lbl-1">College</ion-label>
+                            <ion-select class="pr20">
+                                <ion-option *ngFor="let item of college | async" [value]="item">{{item}}</ion-option>
+                            </ion-select>
                               
 
                         </ion-item>
@@ -68,32 +70,33 @@
       <h4>Latest Math Books</h4>
       <p>Some of the latest posted books under the category Mathematics.</p>
     </div>
-
+    <ion-spinner *ngIf="!items" name="bubbles"></ion-spinner>
     <!-- Here should be a loop for books under math category -->
-    <div class="items">
-        <ion-grid>
-            <ion-row>
-              <ion-col col-6 col-sm-4 col-md-4 col-lg-4 col-xl-2 >
-
-                <ion-card *ngFor="let book of items | async" (tap)="openPage(book)">     
-                  <img class="bookCovers" [src]="book.cover" />
-                  <ion-card-content>
-                    <ion-item no-padding>
-                      <ion-avatar item-start>
-                          <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
-                      </ion-avatar>
-                      <ion-label>
-                          <h6 class="text-white">Student Name</h6>
-                          <p class="text-white font-9">Name of the College</p>
-                      </ion-label>
-                    </ion-item>
-                  </ion-card-content>
-                </ion-card>
-
-              </ion-col>
-            </ion-row>
-        </ion-grid>
-    </div>
+    <div *ngIf="items" class="block" margin-top>
+        <div class="block-title" padding-left padding-right class="verticalSpace">
+          
+          <div class="clear"></div>
+        </div>
+        <div class="items" padding-left padding-bottom>
+          <div class="card round" *ngFor="let book of items | async" (click)="openPage(book)">
+            <div class="card-header" [ngStyle]="{'background-image': 'url(' + book.cover + ')'}">
+            </div>
+            <ion-item class="customItems">
+                <ion-avatar item-start>
+                    <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                </ion-avatar>
+                <ion-label>
+                    <h6 class="text-dark">Student Name</h6>
+                    <p class="text-dark font-9">Name of the College</p>
+                </ion-label>
+              </ion-item>
+            <div class="padding-xs">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+  
     <ion-fab right bottom>
         <button ion-fab color="orange"><ion-icon name="book"></ion-icon></button>
         <ion-fab-list side="top">
