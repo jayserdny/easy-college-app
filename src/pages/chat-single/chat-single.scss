@@ -96,14 +96,14 @@ img.profile-pic.right {
 }
 
 .chat-bubble.right {
-  background-color: #158ffe;
+  background-color: orange;
   color: #fff;
   float: right;
   margin-right: 55px;
 }
 
 .chat-bubble.right:before {
-  background-color: #158ffe;
+  background-color: orange;
   right: 10px;
   -webkit-transform: rotate(118deg) skew(-5deg);
 }
