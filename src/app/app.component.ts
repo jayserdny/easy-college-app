@@ -12,11 +12,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-<<<<<<< HEAD
-  rootPage: any = "ChatPage";
-=======
   rootPage: any = HomePage;/**Change this back to HomePage */
->>>>>>> master
 
   pages: Array<{title: string, component: any, icon: string}>;
 
@@ -26,14 +22,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon: "home" },
-      { title: 'My Profile', component: HomePage, icon: "contact" },      
+      { title: 'My Profile', component: HomePage, icon: "contact" },
       { title: 'Categories', component: HomePage, icon: "list" },
       { title: 'Costumer Support', component: HomePage, icon: "build" },
       { title: 'Settings', component: HomePage, icon: "settings" },
       { title: 'Log Out', component: HomePage, icon: "log-out" },
-      
-      
-      
+
+
+
     ];
 
   }

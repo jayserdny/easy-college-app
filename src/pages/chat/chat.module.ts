@@ -1,13 +1,19 @@
+//import { SharedModule } from '../../../app/shared.module';
+import { ChatsPage } from './chat';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { ChatPage } from './chat';
 
 @NgModule({
   declarations: [
-    ChatPage,
+    ChatsPage,
   ],
   imports: [
-    IonicPageModule.forChild(ChatPage),
+    IonicPageModule.forChild(ChatsPage),
+    //SharedModule
   ],
+  exports: [
+    ChatsPage
+  ]
 })
-export class ChatPageModule {}
+
+export class ChatsPageModule { }
