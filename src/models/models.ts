@@ -1,8 +1,10 @@
 export interface User {
-    name: String;
-    college: String;
-    major: String;
-    profilePicture: String;
+    name: string;
+    email: string;
+    password: string;
+    college: string;
+    major: string;
+    profilePicture: string;
     stats: {
         traded: Number;
         posted: Number;

@@ -5,28 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-<!--I dont know how to put that back button right noww its menu-->
    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="back"></ion-icon>
-      </button>
-    <ion-title>App Name</ion-title>
-<ion-buttons end>
-        <button ion-button icon-only>
-          <ion-icon name="ios-search-outline"></ion-icon>
-        </button>
-        
-      </ion-buttons>
+    <ion-title></ion-title>
 
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-
-<!-- what im trying to do here is put the trader info like a profile pic, college and etc. -->
 <ion-list>
   <ion-item>
     <ion-avatar item-start>
@@ -37,51 +25,51 @@
   </ion-item>
 </ion-list>
 
-<div text-center><h5>{{ book.title }}</h5></div>
-{{ book.isbn }}
-{{ book.description }}
-
-<div text-center>
-	<img width="50%" height="50%"  [src]="book.cover">
+<div class="imagePlaceholder" text-center>
+  <img [src]="book?.cover" class="imageAjusted">
 </div>
 
-<h5>Book info</h5>
+<div padding-left padding-right>
+  <h5>Title: {{ book.title }}</h5>
+  <hr />
+  <h5>Book info</h5>
+  <p>Author: {{ book.author }}</p>
+  <p>ISBN: {{ book.isbn }}</p>
+  <p>This is the book that everyone needs for there basic mathematics! This is currently the sixth edidtion and its in pretty good shape if you would like photos you can message. I am willing to trade this book in for 7th or 8th edition Astronomy book
+  </p>
 
-<p>This is the book that everyone needs for there basic mathematics! This is currently the sixth edidtion and its in pretty good shape if you would like photos you can message. I am willing to trade this book in for 7th or 8th edition Astronomy book
-</p>
+  <hr />
+  <h4>Hey! This student is looking for the books below</h4>
 
-<h3>Do you have need any of these books?</h3>
+</div>
 
-
-<!--Need Pictures of the book and in the text the type of book it is. Also I dont know how to put i thte way-->
-<ion-grid>
-  <ion-row>
-    <ion-col>
-     <h6 class="text-white">Student Name</h6>
-                          <p class="text-white font-9">Name of the College</p>
-    </ion-col>
-    <ion-col>
-      <h6 class="text-white">Student Name</h6>
-                          <p class="text-white font-9">Name of the College</p>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-     <h6 class="text-white">Student Name</h6>
-                          <p class="text-white font-9">Name of the College</p>
-    </ion-col>
-    <ion-col>
-     <h6 class="text-white">Student Name</h6>
-                          <p class="text-white font-9">Name of the College</p>
-    </ion-col>
-    <ion-col>
-      <h6 class="text-white">Student Name</h6>
-                          <p class="text-white font-9">Name of the College</p>
-    </ion-col>
-    
-  </ion-row>
-</ion-grid>
+<div class="block" margin-top style="padding-bottom: 10%;">
+    <div class="block-title" padding-left padding-right class="verticalSpace">
+      
+      <div class="clear"></div>
+    </div>
+    <div class="items" padding-left padding-bottom>
+      <div class="card round" *ngFor="let book of items | async" (click)="openPage(book)">
+        <div class="card-header" [ngStyle]="{'background-image': 'url(' + book.cover + ')'}">
+        </div>
+        <ion-item class="customItems">
+            <ion-avatar item-start>
+                <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+            </ion-avatar>
+            <ion-label>
+                <h6 class="text-dark">Student Name</h6>
+                <p class="text-dark font-9">Name of the College</p>
+            </ion-label>
+          </ion-item>
+        <div class="padding-xs">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="listingSingleFooter" class="footerNew" text-center>
+      <button (tap)="addChat()" ion-button round style="margin: 0px !important;height: 50px;font-size: 13px !important;" color="orange">
+          <ion-icon name="ios-chatbubbles" style="margin-right: 6px;"></ion-icon> Chat With Username
+        </button>
+   </div>
 </ion-content>
-<ion-footer>
-	<button ion-button>test</button>
-</ion-footer>
