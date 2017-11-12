@@ -15,7 +15,7 @@
 
 				<div class="message-detail">
 					<span (click)="viewProfile(message)" class="bold"></span>,
-					<span>{{message.date}}</span>
+					<span>{{message.date | amTimeAgo}}</span>
 				</div>
 
 			</div>
@@ -32,7 +32,7 @@
 
 				<div class="message-detail">
 					<span (click)="viewProfile(message)" class="bold"></span>,
-					<span>{{message.date}}</span>
+					<span>{{message.date | amTimeAgo}}</span>
 				</div>
 
 			</div>
