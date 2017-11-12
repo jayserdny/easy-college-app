@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CameraProvider } from '../../providers/camera/camera'
+import { Observable } from 'rxjs/Observable';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'page-home',
@@ -8,8 +10,14 @@ import { CameraProvider } from '../../providers/camera/camera'
 })
 export class HomePage {
 
+  items: Observable<any[]>;
+  searchBar: string;
+
   constructor(public navCtrl: NavController,
-              private cameraUtil: CameraProvider) {
+              private cameraUtil: CameraProvider,
+              db: AngularFirestore) {
+
+                this.items = db.collection('books', ref => ref.orderBy("postedDate", "desc")).valueChanges();
 
   }
 
@@ -32,6 +40,18 @@ export class HomePage {
       this.navCtrl.push("PostBoookPage", {
         photo: data
       })
+    })
+  }
+
+  search() {
+    this.navCtrl.push("SearchPage", {
+      text: this.searchBar
+    })
+  }
+
+  openPage(book: any) {
+    this.navCtrl.push("SingleDetailPage", {
+      details: book
     })
   }
 
