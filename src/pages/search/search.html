@@ -7,22 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>search</ion-title>
+    <ion-title>Search Results</ion-title>
 
   </ion-navbar>
 
 </ion-header>
-<ion-content padding>
+<ion-content>
 <h1 text-center>Here's what we found!</h1>
 
 <ion-list>
-  <ion-item>
+  <ion-item *ngFor="let result of results | async" (tap)="openDetails(result)">
     <ion-thumbnail item-start>
-      <img src="https://resizing.flixster.com/V-Gl1_6G3qSzznd5HcLuRbZRdYQ=/206x305/v1.bTsxMTE3MzY2ODtqOzE3NTg5OzEyMDA7ODAwOzEyMDA">
+      <img [src]="result.cover">
     </ion-thumbnail>
-    <h2>Name of the book</h2>
+    <h2>{{ result.title }}</h2>
     <p>Student name</p>
     <p>College</p>
   </ion-item>
 </ion-list>
+
+<h1 text-center>There are not results BITCH! 😭</h1>
 </ion-content>

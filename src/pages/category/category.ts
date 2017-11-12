@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the MessagesPage page.
+ * Generated class for the CategoryPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-messages',
-  templateUrl: 'messages.html',
+  selector: 'page-category',
+  templateUrl: 'category.html',
 })
-export class MessagesPage {
+export class CategoryPage {
 
+  category;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MessagesPage');
+    console.log('ionViewDidLoad CategoryPage');
   }
 
 }

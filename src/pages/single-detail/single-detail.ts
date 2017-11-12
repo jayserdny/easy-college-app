@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SingleDetailPage {
 
+  private book;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    this.book = this.navParams.get("details")
   }
 
   ionViewDidLoad() {

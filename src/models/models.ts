@@ -19,5 +19,6 @@ export interface Book {
     edition: String;
     subject: String;
     cover: String;
+    postedDate: any;
 
 }
