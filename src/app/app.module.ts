@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -16,6 +17,7 @@ import { environment } from '../environment/environment';
 import { BookUtilProvider } from '../providers/book-util/book-util';
 import { CameraProvider } from '../providers/camera/camera';
 import { Camera } from '@ionic-native/camera';
+import { ImageRecognitionProvider } from '../providers/image-recognition/image-recognition';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { Camera } from '@ionic-native/camera';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -42,7 +45,8 @@ import { Camera } from '@ionic-native/camera';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BookUtilProvider,
-    CameraProvider
+    CameraProvider,
+    ImageRecognitionProvider
   ]
 })
 export class AppModule {}

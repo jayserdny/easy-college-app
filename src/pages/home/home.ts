@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { CameraProvider } from '../../providers/camera/camera'
 import { Observable } from 'rxjs/Observable';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { ImageRecognitionProvider } from '../../providers/image-recognition/image-recognition'
 
 @Component({
   selector: 'page-home',
@@ -15,8 +16,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
               private cameraUtil: CameraProvider,
+              private imageRe: ImageRecognitionProvider,
               db: AngularFirestore) {
-
+                this.imageRe.test().then(data =>{
+                  console.log(data)
+                })
                 this.items = db.collection('books', ref => ref.orderBy("postedDate", "desc")).valueChanges();
 
   }
