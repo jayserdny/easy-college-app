@@ -1,26 +1,9 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+#Inspiration 
+As college students, we understand how hard it is for us to get our books for a good price. Every semester students from every college have to spend hundreds of dollars only on books. Sometimes students buy the books and when they try to sell it they don’t get the amount they paid for. 
 
-## How to use this template
+## What it does
+This application allows the students to trade their books with other students from the same college. Imagine getting rid of the book you don’t longer need and getting the one you are going to use all at the same time and most important at no cost to you. The app asks you for the books you have and the ones you need, then it finds someone else who has the book you need and wants the one you have. Here’s where you get in touch and exchange or trade your books. Easy right? Now let’s think outside the box. Imagine this trade with more than two people.  Let's say person C has the book person A wants, person B has the book that person C wants, and person A has the book that person B wants. This app is going to make this multi-trading between persons A, B, and C. 
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
-
-Then, to run it, cd into `mySideMenu` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
+##How we built it?
+To build this hybrid app we used Firebase SDK, IBM Image classifier, Angular 4, Node JS, and Ionic Framework.
 
