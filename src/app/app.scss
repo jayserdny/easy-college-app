@@ -39,8 +39,17 @@
     padding-right: 20px !important;
 }
 
+.ptb20 {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
 .pr20 {
     padding-right: 20px;
+}
+
+.m0 {
+    margin: 0px !important;
 }
 
 .plr30 {
@@ -80,9 +89,26 @@
     border-radius: 6px 6px 6px 6px !important;
 }
 
+.button-md {
+    text-transform: none !important;
+}
+
+.form-fill {
+    background-color: #eceef6;
+}
+
 .bg-white {
     background-color: #ffffff !important;
     color: #20242d !important;
+}
+
+.block {
+    display: block;
+}
+
+.bg-standard {
+    background-color: #007aff;
+    color: #eceef6;
 }
 
 .form-fill {
@@ -94,12 +120,28 @@
     color: #20242d !important;
 }
 
+.text-white {
+    color: #ffffff !important;
+}
+
 .font-14 {
     font-size: 14px !important;
 }
 
 .font-9 {
     font-size: 9px !important;
+}
+
+.fw600 {
+    font-weight: 600 !important;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.up {
+    text-transform: uppercase !important;
 }
 
 

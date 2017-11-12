@@ -5,54 +5,149 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>App Name</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col class="orangeBorder" col-12 text-center>
-        
-              <img class="circlePhoto" src="http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png">
-              <h1>Student Name</h1>
-              <h2>College 
-                - Major</h2> 
-              <hr />
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-          <h3>My Books</h3>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-        <ion-card>
-            <img class = "Test" src= "https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg"/>
-            <ion-card-content>
-              <ion-card-title>
-                <p class="textCustom">Book Title</p>
-                </ion-card-title>
-            </ion-card-content>
-          </ion-card>         
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <h4>Wish List</h4>
-      </ion-col>
-      <ion-card>
-          <img class = "Test" src= "https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg"/>
-          <ion-card-content>
-            <ion-card-title>
-              <p class="textCustom">Book Title</p>
-              </ion-card-title>
-          </ion-card-content>
-        </ion-card> 
-    </ion-row>
-  </ion-grid>
   
-</ion-content>
+    <ion-navbar>
+      <ion-title>My Profile</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="orangeBorder" col-12 text-center>
+          <img class="circlePhoto" src="http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png">
+          <h1>Student Name</h1>
+          <h2 class="collegeMajor">Bronx Community College - Computer Science</h2> 
+          <hr />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+    <h3 padding>My Books</h3>
+
+    <div class="block" margin-top style="padding-bottom: 10%;">
+      <div class="block-title" padding-left padding-right class="verticalSpace">
+        <div class="clear"></div>
+      </div>
+
+      <div class="items" padding-left padding-bottom>
+        <div class="card round" (click)="openPage(book)">
+          <div class="card-header" [ngStyle]="{'background-image': 'url(https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg)'}">
+          </div>
+
+          <ion-item class="customItems">
+            <ion-avatar item-start>
+              <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+            </ion-avatar>
+
+            <ion-label>
+              <h6 class="text-dark">Student Name</h6>
+              <p class="text-dark font-9">Name of the College</p>
+            </ion-label>
+          </ion-item>
+          <div class="padding-xs"></div>
+        </div>
+
+        <div class="card round" (click)="openPage(book)">
+            <div class="card-header" [ngStyle]="{'background-image': 'url(https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg)'}">
+            </div>
+  
+            <ion-item class="customItems">
+              <ion-avatar item-start>
+                <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+              </ion-avatar>
+  
+              <ion-label>
+                <h6 class="text-dark">Student Name</h6>
+                <p class="text-dark font-9">Name of the College</p>
+              </ion-label>
+            </ion-item>
+            <div class="padding-xs"></div>
+          </div>
+
+          <div class="card round" (click)="openPage(book)">
+              <div class="card-header" [ngStyle]="{'background-image': 'url(https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg)'}">
+              </div>
+    
+              <ion-item class="customItems">
+                <ion-avatar item-start>
+                  <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                </ion-avatar>
+    
+                <ion-label>
+                  <h6 class="text-dark">Student Name</h6>
+                  <p class="text-dark font-9">Name of the College</p>
+                </ion-label>
+              </ion-item>
+              <div class="padding-xs"></div>
+            </div>
+      </div>
+    </div>
+
+    <h3 padding>Wish List</h3>
+    
+        <div class="block" margin-top style="padding-bottom: 10%;">
+          <div class="block-title" padding-left padding-right class="verticalSpace">
+            <div class="clear"></div>
+          </div>
+    
+          <div class="items" padding-left padding-bottom>
+            <div class="card round" (click)="openPage(book)">
+              <div class="card-header" [ngStyle]="{'background-image': 'url(https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg)'}">
+              </div>
+    
+              <ion-item class="customItems">
+                <ion-avatar item-start>
+                  <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                </ion-avatar>
+    
+                <ion-label>
+                  <h6 class="text-dark">Student Name</h6>
+                  <p class="text-dark font-9">Name of the College</p>
+                </ion-label>
+              </ion-item>
+              <div class="padding-xs"></div>
+            </div>
+    
+            <div class="card round" (click)="openPage(book)">
+                <div class="card-header" [ngStyle]="{'background-image': 'url(https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg)'}">
+                </div>
+      
+                <ion-item class="customItems">
+                  <ion-avatar item-start>
+                    <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                  </ion-avatar>
+      
+                  <ion-label>
+                    <h6 class="text-dark">Student Name</h6>
+                    <p class="text-dark font-9">Name of the College</p>
+                  </ion-label>
+                </ion-item>
+                <div class="padding-xs"></div>
+              </div>
+    
+              <div class="card round" (click)="openPage(book)">
+                  <div class="card-header" [ngStyle]="{'background-image': 'url(https://images-na.ssl-images-amazon.com/images/I/51nSnO5i7eL._SX403_BO1,204,203,200_.jpg)'}">
+                  </div>
+        
+                  <ion-item class="customItems">
+                    <ion-avatar item-start>
+                      <img src="https://static.licdn-ei.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png">
+                    </ion-avatar>
+        
+                    <ion-label>
+                      <h6 class="text-dark">Student Name</h6>
+                      <p class="text-dark font-9">Name of the College</p>
+                    </ion-label>
+                  </ion-item>
+                  <div class="padding-xs"></div>
+                </div>
+          </div>
+        </div>
+    
+  </ion-content>
+  

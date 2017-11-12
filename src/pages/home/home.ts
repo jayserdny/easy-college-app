@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
+import firebase  from 'firebase'
 import { CameraProvider } from '../../providers/camera/camera'
 import { Observable } from 'rxjs/Observable';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { ImageRecognitionProvider } from '../../providers/image-recognition/image-recognition'
 
+
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,14 +17,18 @@ export class HomePage {
 
   items: Observable<any[]>;
   searchBar: string;
+  college: Observable<any[]>;
 
   constructor(public navCtrl: NavController,
               private cameraUtil: CameraProvider,
               private imageRe: ImageRecognitionProvider,
-              db: AngularFirestore) {
-                this.imageRe.test().then(data =>{
-                  console.log(data)
-                })
+              db: AngularFirestore,
+              adb: AngularFireDatabase) {
+                // this.imageRe.test().then(data =>{
+                //   console.log(data)
+                // })
+              
+                this.college = adb.list('colleges/-KxR5p-kMxFj0DvuEjMm').valueChanges()
                 this.items = db.collection('books', ref => ref.orderBy("postedDate", "desc")).valueChanges();
 
   }
