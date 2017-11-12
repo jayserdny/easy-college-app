@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import { Book } from '../../models/models';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import firebase from 'firebase';
+import  firebase   from 'firebase';
 
 var metadata = {
   contentType: 'image/png'
@@ -12,7 +12,7 @@ var metadata = {
 @Injectable()
 export class BookUtilProvider {
 
-  // Initialize a collection for the books 
+  // Initialize a collection for the books
   private bookCollection: AngularFirestoreCollection<Book>;
   public RequestPictureRef: any;
 
@@ -31,49 +31,49 @@ export class BookUtilProvider {
    * @param {string} fileType: File type of the image.
    */
   b64toBlob(b64Data: string, sliceSize: number,fileType: string) {
-    
+
         sliceSize = sliceSize || 512;
-    
+
         var byteCharacters = atob(b64Data);
         var byteArrays = [];
-    
+
         for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
           var slice = byteCharacters.slice(offset, offset + sliceSize);
-    
+
           var byteNumbers = new Array(slice.length);
           for (var i = 0; i < slice.length; i++) {
             byteNumbers[i] = slice.charCodeAt(i);
           }
-    
+
           var byteArray = new Uint8Array(byteNumbers);
-    
+
           byteArrays.push(byteArray);
         }
-        
+
         let blob;
         blob = new Blob(byteArrays, { type: fileType });
         return blob;
-  
-  
+
+
   }
 
   generatePictures(snap, pictureArray, userId, listingTitle) {
-    
+
         let urls = [];
-    
+
         this.RequestPictureRef.child(userId).child(listingTitle).child(this.makeid() + ".png")
         .put(snap, metadata).then((savedPicture) => {
-    
+
           for (let i = 0; i < pictureArray.length; i++) {
-    
+
             urls[i] = savedPicture.downloadURL;
-    
+
           }
-    
+
         })
-    
+
         return urls;
-    
+
   }
 
   /**
@@ -94,11 +94,11 @@ export class BookUtilProvider {
 
   /**
    * Method to add a book to firestore in firebase
-   * @param book 
+   * @param book
    */
   addBook(book: Book, userId, bookTitle) {
 
-  
+
     return new Promise(resolve => {
       this.RequestPictureRef.child(userId).child(bookTitle).child(this.makeid()+".png")
       .put(book.cover, metadata).then((savedPicture) => {
@@ -112,15 +112,15 @@ export class BookUtilProvider {
     }).catch(error =>{
       console.log(error)
     })
-   
-    
+
+
   }
 
   getBooks() {
 
   }
 
-  
+
 
 
 

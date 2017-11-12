@@ -102,6 +102,9 @@ export class MessagesPage {
 
       this.messages.push(messageData);
       this.scrollToBottom();
+      let answers = ["Hey!", "How are you doing?","How may I help you?","Sorry my friend this is just a Demo"]
+      //let random = this.shuffle(answers)
+
 
       setTimeout(() => {
         const replyData =
@@ -112,7 +115,7 @@ export class MessagesPage {
             userId: this.toUser._id,
             username: this.toUser.username,
             pic: this.toUser.pic,
-            text: 'Just a quick reply'
+            text: answers[Math.floor(Math.random() * answers.length)]
           };
         this.messages.push(replyData);
         this.scrollToBottom();
@@ -120,6 +123,19 @@ export class MessagesPage {
     }
     this.chatBox = '';
   }
+
+  // shuffle(answers) {
+  //   var currentIndex = answers.length, temporaryValue, randomIndex;
+  //
+  //   while (0 !== currentIndex) {
+  //     randomIndex= Math.floor(Math.random()*currentIndex);
+  //     currentIndex=-1;
+  //     temporaryValue=answers[currentIndex];
+  //     answers[currentIndex]= answers[randomIndex];
+  //     answers[randomIndex]= temporaryValue;
+  //   }
+  //   return answers;
+  // }
 
   scrollToBottom() {
     setTimeout(() => {
