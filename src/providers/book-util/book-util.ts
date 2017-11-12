@@ -21,6 +21,7 @@ export class BookUtilProvider {
     // Make a reference of the collection in firebase
     this.bookCollection = afs.collection<Book>('books');
     this.RequestPictureRef = firebase.storage().ref('assets/listingPictures/');
+  
   }
 
   /**

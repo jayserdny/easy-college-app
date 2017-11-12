@@ -18,6 +18,7 @@ import { CameraProvider } from '../providers/camera/camera';
 import { Camera } from '@ionic-native/camera';
 import { ImageRecognitionProvider } from '../providers/image-recognition/image-recognition';
 import { AuthProvider } from '../providers/auth/auth';
+import { AibotProvider } from '../providers/aibot/aibot';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AuthProvider } from '../providers/auth/auth';
     BookUtilProvider,
     CameraProvider,
     ImageRecognitionProvider,
-    AuthProvider
+    AuthProvider,
+    AibotProvider
   ]
 })
 export class AppModule {}
