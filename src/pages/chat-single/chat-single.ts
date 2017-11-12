@@ -10,13 +10,13 @@ import { IonicPage, NavController, Content } from 'ionic-angular';
 export class MessagesPage {
   toUser = {
     _id: '534b8e5aaa5e7afc1b23e69b',
-    pic: 'https://i.pinimg.com/736x/55/62/16/55621658bd0197afd7ec2d91ea0c8339--swings-cho-kyuhyun.jpg',
+    pic: 'https://career.virginia.edu/sites/career.virginia.edu/files/styles/sane_output/public/profile%20blank_2.jpg?itok=7Mt86Vqh',
     username: 'Venkman',
   };
 
   user = {
     _id: '534b8fb2aa5e7afc1b23e69c',
-    pic: 'https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e15/10903590_585774918225081_1873336001_n.jpg?ig_cache_key=ODk0Njk0NTM4MTAzNzI5NTY4.2',
+    pic: 'https://career.virginia.edu/sites/career.virginia.edu/files/styles/sane_output/public/profile%20blank_2.jpg?itok=7Mt86Vqh',
     username: 'Marty',
   };
 
@@ -28,24 +28,24 @@ export class MessagesPage {
       date: new Date(),
       userId: this.user._id,
       username: this.user.username,
-      pic: "https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e15/10903590_585774918225081_1873336001_n.jpg?ig_cache_key=ODk0Njk0NTM4MTAzNzI5NTY4.2",
-      text: 'Wow!!'
+      pic: "http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png",
+      text: 'Hey!'
     },
     {
       _id: 2,
       date: new Date(),
       userId: this.toUser._id,
       username: this.toUser.username,
-      pic: "https://i.pinimg.com/736x/55/62/16/55621658bd0197afd7ec2d91ea0c8339--swings-cho-kyuhyun.jpg",
-      text: 'what??'
+      pic: "http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png",
+      text: 'Hi'
     },
     {
       _id: 3,
       date: new Date(),
       userId: this.toUser._id,
       username: this.toUser.username,
-      pic: "https://i.pinimg.com/564x/57/e1/c4/57e1c4c50fd479756351b48762f5ecc5.jpg",
-      text: 'Pretty long message with lots of content'
+      pic: "http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png",
+      text: 'Do have a textbook for CS 1111?'
     },
     {
       _id: 4,
@@ -53,7 +53,7 @@ export class MessagesPage {
       userId: this.user._id,
       username: this.user.username,
       pic: this.user.pic,
-      text: 'Pretty long message with even way more of lots and lots of content'
+      text: 'Maybe'
     },
     {
       _id: 5,
@@ -61,7 +61,7 @@ export class MessagesPage {
       userId: this.user._id,
       username: this.user.username,
       pic: this.user.pic,
-      text: 'what??'
+      text: 'Maybe not'
     },
     {
       _id: 6,
@@ -69,7 +69,7 @@ export class MessagesPage {
       userId: this.toUser._id,
       username: this.toUser.username,
       pic: this.toUser.pic,
-      text: 'yes!'
+      text: 'Are you sure?'
     }
   ];
 

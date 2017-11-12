@@ -6,7 +6,7 @@
 <ion-content>
 	<div *ngFor="let message of messages" class="message-wrapper" on-hold="onMessageHold($event, $index, message)">
 		<div *ngIf="user._id !== message.userId">
-			<img (click)="viewProfile(message)" class="profile-pic left" src="https://i.pinimg.com/736x/55/62/16/55621658bd0197afd7ec2d91ea0c8339--swings-cho-kyuhyun.jpg" />
+			<img (click)="viewProfile(message)" class="profile-pic left" src="http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png" />
 			<!--  wave-->
 			<div class="chat-bubble left slide-left">
 
@@ -23,7 +23,7 @@
 
 		<div *ngIf="user._id === message.userId">
 
-			<img (click)="viewProfile(message)" class="profile-pic right" src="https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e15/10903590_585774918225081_1873336001_n.jpg?ig_cache_key=ODk0Njk0NTM4MTAzNzI5NTY4.2" />
+			<img (click)="viewProfile(message)" class="profile-pic right" src="http://www.pieglobal.com/wp-content/uploads/2015/10/placeholder-user.png" />
 
 			<div class="chat-bubble right slide-right">
 
