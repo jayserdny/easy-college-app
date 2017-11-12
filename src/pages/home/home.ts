@@ -24,9 +24,9 @@ export class HomePage {
               private imageRe: ImageRecognitionProvider,
               db: AngularFirestore,
               adb: AngularFireDatabase) {
-                // this.imageRe.test().then(data =>{
-                //   console.log(data)
-                // })
+                this.imageRe.test().then(data =>{
+                  console.log(data)
+                })
               
                 this.college = adb.list('colleges/-KxR5p-kMxFj0DvuEjMm').valueChanges()
                 this.items = db.collection('books', ref => ref.orderBy("postedDate", "desc")).valueChanges();

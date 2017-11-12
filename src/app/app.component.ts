@@ -27,6 +27,7 @@ export class MyApp {
       { title: 'Categories', component: "CategoryPage", icon: "list" },
       { title: 'Customer Support', component: HomePage, icon: "build" },
       { title: 'Settings', component: HomePage, icon: "settings" },
+      { title: 'Test AI', component: "TestAiPage", icon: "settings" },
       { title: 'Log Out', component: HomePage, icon: "log-out" },
 
 
