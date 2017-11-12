@@ -24,7 +24,7 @@ export class MyApp {
       { title: 'Home', component: HomePage, icon: "home" },
       { title: 'My Profile', component: HomePage, icon: "contact" },      
       { title: 'Categories', component: HomePage, icon: "list" },
-      { title: 'Costumer Support', component: HomePage, icon: "build" },
+      { title: 'Customer Support', component: HomePage, icon: "build" },
       { title: 'Settings', component: HomePage, icon: "settings" },
       { title: 'Log Out', component: HomePage, icon: "log-out" },
       
