@@ -37,10 +37,12 @@
   </ion-item>
 </ion-list>
 
-<div text-center><h5>Mathmatics Sixth Edition</h5></div>
+<div text-center><h5>{{ book.title }}</h5></div>
+{{ book.isbn }}
+{{ book.description }}
 
 <div text-center>
-	<img width="50%" height="50%"  src="https://oup.com.pk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/9/7/9780195979558_1.jpg">
+	<img width="50%" height="50%"  [src]="book.cover">
 </div>
 
 <h5>Book info</h5>
