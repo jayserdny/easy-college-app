@@ -8,11 +8,6 @@ var apiai = require('apiai');
 
 var app = apiai("58c35b1299894216b20b0acaf8752817");
 
-
-
-
-
-
 /*
   Generated class for the AibotProvider provider.
 
@@ -21,6 +16,7 @@ var app = apiai("58c35b1299894216b20b0acaf8752817");
 */
 @Injectable()
 export class AibotProvider {
+
   constructor(public http: Http) {
     console.log('Hello AibotProvider Provider');
   }
@@ -39,3 +35,7 @@ export class AibotProvider {
       request.end();
       }
 };
+
+
+  
+}
