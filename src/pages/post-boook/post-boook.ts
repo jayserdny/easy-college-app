@@ -19,7 +19,9 @@ export class PostBoookPage {
               public toastCtrl: ToastController,
               public loadingCtrl: LoadingController,
               private bookUtil: BookUtilProvider) {
-    this.coverPhoto += navParams.get("photo")
+                
+    this.coverPhoto = navParams.get("photo")
+    this.coverPhoto = this.bookUtil.b64toBlob(this.coverPhoto, 512,"image/png")
     
   }
  
@@ -35,8 +37,8 @@ export class PostBoookPage {
     });
     loading.present();
     return new Promise(resolve => {
-      this.bookUtil.addBook(this.book).then(data => {
-        resolve(data)
+      this.bookUtil.addBook(this.book, "userId", "book-title").then(data => {
+        resolve(data as any)
         loading.dismiss()
         toast.present()
         this.navCtrl.pop()
