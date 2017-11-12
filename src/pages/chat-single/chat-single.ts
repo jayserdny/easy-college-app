@@ -29,7 +29,7 @@ export class MessagesPage {
       userId: this.user._id,
       username: this.user.username,
       pic: "https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s480x480/e15/10903590_585774918225081_1873336001_n.jpg?ig_cache_key=ODk0Njk0NTM4MTAzNzI5NTY4.2",
-      text: 'WOW!!'
+      text: 'Wow!!'
     },
     {
       _id: 2,
